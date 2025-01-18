@@ -2,12 +2,6 @@
 using namespace std;
 const int M = 1000000007;
 
-#ifndef ONLINE_JUDGE
-#include "../../../algo/debug.h"
-#else
-#define debug(...) 42
-#endif
-
 void solve(){
     int n, q;
     cin >> n >> q;
@@ -23,7 +17,6 @@ void solve(){
     for(int i = 1; i <= n; i++){
         p[i] = p[i - 1] + (a[i - 1] & 1);
     }
-    debug(p);
     while(q--){
         int l, r, k;
         cin >> l >> r >> k;
